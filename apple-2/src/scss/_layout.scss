@@ -1,0 +1,333 @@
+// General styles
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.green-text {
+	color: $green;
+	font-weight: 600;
+}
+
+// Classes
+.visible-mobile {
+	display: block;
+	@include mq('sm') {
+		display: none;
+	}
+}
+
+.visible-desktop {
+	display: none;
+	@include mq('sm') {
+		display: block;
+	}
+}
+
+// Header styles
+header {
+	h3 {
+		font-size: 30px;
+		font-weight: 600;
+		margin-top: 0;
+		line-height: 1;
+		@include mq('sm') {
+			margin-bottom: 28px;
+			font-size: 40px;
+		}
+		span {
+			display: block;
+			color: $gray-lt;
+			font-size: 14px;
+			margin-bottom: 10px;
+			@include mq('sm') {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+
+// Layout classes
+.apple {
+	// -- Section Banner -- //
+	&__banner {
+		background-color: $black;
+		color: $white;
+		padding: 30px;
+		position: relative;
+		border-bottom: 4px solid $gray;
+		@include mq('sm') {
+			padding: 80px 20px;
+		}
+		&-wrapper {
+			color: $white;
+			text-align: center;
+			header {
+				text-align: center;
+				h1 {
+					@include iconSVG('../img/logo.png');
+					display: inline-block;
+					width: 30px;
+					height: 40px;					
+				}
+				h2 {
+					font-size: 25px;
+					margin: 0 0 10px;
+					@include mq('sm') {
+						font-size: 50px;
+					}
+				}
+			}	
+			p {
+				display: inline-block;				
+				font-size: 16px;
+				max-width: 250px;
+				@include mq('sm') {
+					max-width: 420px;
+				}
+			}
+			&--cta {
+				padding: 20px 0;
+				a {
+					@include defBtn();
+				}
+			}
+			img {
+				display: inline-block;
+				max-width: 70%;
+				@include mq('sm') {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	// -- Section Waves -- //
+	&__waves {
+		position: relative;
+		padding: 22px;
+		background-color: $black;
+		color: $white;
+		padding: 33px;
+		position: relative;
+		border-bottom: 4px solid $gray;
+		@include mq('sm') {
+			min-height: 330px;
+			padding: 180px 30px 30px;
+		}
+
+		&--image {
+			display: none;
+			@include mq('sm') {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 0;
+			}
+		}
+
+		&-wrapper {
+			position: relative;
+			z-index: 1;
+			@include mq('sm') {
+				padding-left: 360px;
+			}			
+		}
+
+		&--caption {
+			max-width: 365px;
+			@include mq('sm') {
+				max-width: 325px;
+			}
+		}
+	}
+	// -- Section Environment -- //
+	&__environment {
+		padding: 30px 20px;		
+		@include mq('sm') {
+			overflow: hidden;
+			padding: 0 0;
+			background-color: $wheat;
+		}
+
+		&-wrapper {
+			position: relative;
+			header {
+				h3 {
+					@include mq('sm') {
+						font-size: 50px;
+					}
+				}
+			}
+			img {
+				@include mq('sm') {
+					position: absolute;
+					right: -50%;
+					top: 0;
+				}
+			}
+		}
+		&--caption{
+			padding: 30px 0;
+			@include mq('sm') {
+				padding: 100px 0 0;
+				min-height: 510px;
+				max-width: 328px;
+			}
+			p {
+				@include mq('sm') {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	// -- Section Customization -- //
+	&__custom {
+		background-color: $black;
+		color: $white;
+		padding: 40px 30px;
+		position: relative;
+		border-bottom: 4px solid $gray;
+		@include mq('sm') {
+			padding: 57px 20px;
+			min-height: 335px;
+		}
+		&-wrapper {
+			position: relative;
+		}
+		&--caption {
+			p {
+				max-width: 200px;
+			}
+		}
+		&--image {
+			@include mq('sm') {
+				position: absolute;
+				bottom: -32%;
+				right: 0;
+			}			
+		}
+	}
+	// -- Section Performance -- //
+	&__performance {
+		min-height: 417px;
+		&-wrapper {
+			position: relative;
+			padding: 30px;
+			@include mq('sm') { 
+				padding: 85px 0;
+			}
+		}
+		&--image {
+			@include mq('sm') {
+				position: absolute;
+				left: 0;
+				top: 37px;
+			}
+			img {
+				@include mq('sm') {
+					max-width: 220px;
+				}
+			}
+		}
+		&--caption {
+			@include mq('sm') {
+				padding-left: 300px;
+			}
+			p {
+				max-width: 360px;	
+			}			
+		}
+	}
+	// -- Section Magical -- //
+	&__magical {
+		background-color: $black;
+		color: $white;
+		padding: 35px 30px;
+		position: relative;
+		border-bottom: 4px solid $gray;
+		@include mq('sm') {
+			padding: 57px 0;
+			min-height: 335px;
+		}
+		&-wrapper {
+			position: relative;
+		}
+		&--caption {
+			@include mq('sm') {
+				padding: 40px 0;
+			}
+			p {
+				max-width: 274px;
+			}
+		}
+		&--image {
+			@include mq('sm') {
+				position: absolute;
+				bottom: -10%;
+				right: 0;
+			}
+			img {
+				max-width: 252px; 
+			}		
+		}
+	}
+	// -- Section Battery -- //
+	&__battery {
+		background-color: $black;
+		color: $white;
+		padding: 35px 30px;
+		position: relative;
+		border-bottom: 4px solid $gray;
+		@include mq('sm') {
+			padding: 40px 0;
+			min-height: 335px;
+		}
+		&-wrapper {
+			position: relative;
+		}
+		&--image {
+			@include mq('sm') {
+				position: absolute;
+				bottom: 30%;
+				left: 0;
+			}
+			img {
+				max-width: 195px; 
+			}		
+		}
+		&--caption {
+			@include mq('sm') {
+				padding: 0 0 0 274px;
+			}
+		}
+		&--features {
+			padding: 0 0;
+			li {
+				max-width: 95px;
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 10px 0 0;
+				h4 {					
+					font-size: 40px;
+					line-height: 1;
+					color: $white;
+					margin: 0 0;
+					span {
+						color: $gray-lt;
+						font-weight: 600;
+						font-size: 14px;
+					}
+				}
+				p {
+					margin-top: 0;
+					color: $gray-lt;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+	// -- Section Benefits -- //
+	&__banefits{}
+}

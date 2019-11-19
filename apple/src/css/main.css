@@ -1,0 +1,644 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+ @font-face {
+   font-family: 'San Francisco Display';
+   src: url('fonts/SanFranciscoDisplay-Regular.woff2') format('woff2'),
+       url('fonts/SanFranciscoDisplay-Regular.woff') format('woff');
+   font-weight: 200;
+   font-style: normal;
+ }
+
+ @font-face {
+   font-family: 'San Francisco Display';
+   src: url('fonts/SanFranciscoDisplay-Semibold.woff2') format('woff2'),
+       url('fonts/SanFranciscoDisplay-Semibold.woff') format('woff');
+   font-weight: 600;
+   font-style: normal;
+ }
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+body {
+  font-family: 'San Francisco Display';
+  font-weight: 200;
+  font-size: 16px;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+h1,h2,h3,strong{
+  font-weight: 600;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Main Layout
+   ========================================================================== */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    .container {
+      width: 100%;
+    }
+  }
+/* ==========================================================================
+   Page styles
+   ========================================================================== */
+  
+  .apple__banner {
+    background-color: #000;
+    color: #fff;
+    padding: 33px;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .apple__banner {
+      padding: 120px 20px;
+    }
+  }
+
+  .apple__banner-wrapper header {
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__banner-wrapper header {
+      font-size: 40px;
+    }
+  }
+
+  .apple__banner-wrapper header::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .apple__banner-wrapper header h1 {
+    margin: 0 0 24px;
+    width: 124px;
+    height: 48px;
+    background-image: url("../img/logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -999999px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .apple__banner-wrapper header h1 {
+      margin: 0 0 64px;
+      width: 248px;
+      height: 95px;
+    }
+  }
+
+  .apple__banner-wrapper header h2 {
+    font-size: 33px;
+    line-height: 1;
+  }
+
+  @media (min-width: 768px) {
+    .apple__banner-wrapper header h2 {
+      font-size: 60px;
+    }
+  }
+
+  .apple__banner-wrapper p {
+    line-height: 1.4;
+    font-size: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__banner-wrapper p {
+      font-size: 30px;
+    }
+  }
+
+  .apple__banner--icon {
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/scroll-down.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -999999px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+    bottom: -30px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__banner--icon {
+      width: 120px;
+      height: 120px;
+      bottom: -60px;
+    }
+  }
+
+  .apple__numbers-wrapper {
+    padding: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__numbers-wrapper {
+      padding: 120px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .apple__numbers-wrapper-side {
+      width: 50%;
+    }
+  }
+
+  .apple__numbers-wrapper-side.title h2 {
+    font-size: 33px;
+    line-height: 1;
+  }
+
+  @media (min-width: 768px) {
+    .apple__numbers-wrapper-side.title h2 {
+      font-size: 60px;
+      padding: 0 60px 0 0;
+    }
+  }
+
+  .apple__numbers-wrapper-side.numbers ol {
+    padding: 0 40px;
+    position: relative;
+  }
+
+  .apple__numbers-wrapper-side.numbers ol::before {
+    content: "";
+    background-color: #000;
+    display: block;
+    height: 78%;
+    width: 3px;
+    position: absolute;
+    left: -3px;
+    top: 0;
+  }
+
+  @media (min-width: 768px) {
+    .apple__numbers-wrapper-side.numbers ol {
+      padding: 0 60px;
+    }
+  }
+
+  .apple__numbers-wrapper-side.numbers ol li {
+    display: block;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .apple__numbers-wrapper-side.numbers ol li a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .apple__numbers-wrapper-side.numbers ol li a:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    .apple__numbers-wrapper-side.numbers ol li {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .apple__numbers-wrapper-side.numbers ol li:last-child {
+    margin-bottom: 0;
+  }
+
+  .apple__numbers-wrapper-side.numbers ol li span {
+    color: #fff;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    top: 0;
+    text-align: center;
+    left: -56px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .apple__numbers-wrapper-side.numbers ol li span {
+      width: 60px;
+      height: 60px;
+      font-size: 38px;
+      line-height: 55px;
+      left: -93px;
+    }
+  }
+
+  .apple__faq {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .apple__faq-wrapper {
+    padding: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__faq-wrapper {
+      padding: 80px 0;
+    }
+  }
+
+  .apple__faq-wrapper header {
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__faq-wrapper header {
+      font-size: 40px;
+    }
+  }
+
+  .apple__faq-wrapper header::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .apple__faq-wrapper header h2 {
+    font-size: 33px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    .apple__faq-wrapper header h2 {
+      font-size: 60px;
+    }
+  }
+
+  .apple__faq-wrapper ul {
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__faq-wrapper ul {
+      margin-top: 50px;
+      padding: 0 20px;
+    }
+  }
+
+  .apple__faq-wrapper ul li {
+    display: block;
+    padding: 0 20px;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__faq-wrapper ul li {
+      font-size: 25px;
+      margin-bottom: 80px;
+    }
+  }
+
+  .apple__faq-wrapper ul li::before {
+    content: "";
+    width: 13px;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    background-image: url("../img/arrow.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: -999999px;
+    overflow: hidden;
+  }
+
+  .apple__faq-wrapper ul li a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .apple__faq-wrapper ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .apple__faq-wrapper ul li h3 {
+    margin: 0 0;
+  }
+
+  .apple__terms-wrapper {
+    padding: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__terms-wrapper {
+      padding: 80px 0;
+    }
+  }
+
+  .apple__terms-wrapper header {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 768px) {
+    .apple__terms-wrapper header {
+      padding-bottom: 60px;
+    }
+  }
+
+  .apple__terms-wrapper header h2 {
+    font-size: 33px;
+    margin: 0 0;
+    line-height: 1;
+  }
+
+  @media (min-width: 768px) {
+    .apple__terms-wrapper header h2 {
+      font-size: 42px;
+    }
+  }
+
+  .apple__terms-wrapper p {
+    margin-top: 0;
+  }
+
+  @media (min-width: 768px) {
+    .apple__terms-wrapper p {
+      font-size: 30px;
+    }
+  }
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
