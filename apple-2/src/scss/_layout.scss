@@ -163,8 +163,10 @@ header {
 			img {
 				@include mq('sm') {
 					position: absolute;
-					right: -50%;
+					right: -42%;
 					top: 0;
+					height: 100%;
+					width: auto;
 				}
 			}
 		}
@@ -226,7 +228,12 @@ header {
 				top: 37px;
 			}
 			img {
+				display: block;
+				max-width: 70%;
+				margin: 0 auto;
 				@include mq('sm') {
+					display: inline-block;
+					margin: 0 0;
 					max-width: 220px;
 				}
 			}
@@ -288,6 +295,7 @@ header {
 			position: relative;
 		}
 		&--image {
+			text-align: center;
 			@include mq('sm') {
 				position: absolute;
 				bottom: 30%;
@@ -295,6 +303,10 @@ header {
 			}
 			img {
 				max-width: 195px; 
+				margin: 0 auto;
+				@include mq('sm') {
+					margin: 0 0;
+				}
 			}		
 		}
 		&--caption {
@@ -329,5 +341,152 @@ header {
 		}
 	}
 	// -- Section Benefits -- //
-	&__banefits{}
+	&__benefits{
+		// Grid items
+		&--item {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 30px;
+			@include mq('sm') {
+				padding: 50px 0 0;
+				align-items: center;
+				justify-content: space-between;
+			}
+			&-caption {
+				width: 100%;
+				@include mq('sm') {
+					width: 56%;
+				}
+
+				h3 {
+					font-size: 30px;
+					font-weight: 600;
+					margin-top: 0;
+					line-height: 1;
+					@include mq('sm') {
+						margin-bottom: 28px;
+						font-size: 40px;
+					}
+					span {
+						display: block;
+						color: $gray-lt;
+						font-size: 14px;
+						margin-bottom: 10px;
+						@include mq('sm') {
+							font-size: 18px;
+						}
+					}
+				}
+
+				&.music {
+					h3 {
+						span {
+							width: 50px;
+							height: 13px;
+							@include iconSVG('../img/apple-music.png');
+						}
+					}
+				}
+			}
+			&-list,
+			&-image {
+				width: 100%;
+				@include mq('sm') {
+					width: 40%;
+				}
+			}
+
+			&-list {
+				ul {
+					padding: 0 0;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: flex-end;
+					justify-content: space-between;
+					li {
+						width: 42%;
+						display: block;
+						text-align: center;
+						h4 {
+							text-align: center;
+							font-size: 17px;
+						}
+						a {
+							@include defBtn($black);
+						}
+					}
+				}
+			}
+		}
+		// Table
+		&--table {
+			padding: 10px 30px 50px;
+			@include mq('sm') {
+				padding: 0 0 50px;
+			}
+			&__item {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 5px 0;
+				align-items: center;
+				justify-content: space-between;
+				@include mq('sm') {
+					border-bottom: 2px solid $gray-lt2;
+				}
+				h4 {
+					width: 100%;
+					margin: 7px 0;
+					padding: 5px 0;
+					border-bottom: 2px solid $gray-lt2;
+					@include mq('sm') {
+						padding: 0 0;
+						margin: 7px 0;
+						width: 56%;
+						border: none;
+					}
+					span {
+						display: block;
+						color: $gray-lt;
+						font-size: 14px;
+					}
+				}
+				ul {
+					width: 100%;
+					padding: 0 0;
+					@include mq('sm') {
+						width: 40%;
+					}
+					li {
+						display: inline-block;
+						vertical-align: middle;						
+						color: $gray-lt;
+						width: 49%;
+						@include mq('sm') {
+							text-align: center;
+						}
+						img {
+							max-width: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+	// -- Section Terms -- //
+	&__terms {
+		background-color: $white-2;
+		color: $gray-lt;
+		&-wrapper {
+			padding: 30px;
+			@include mq('sm') {
+				padding: 30px 0;
+			}
+			ol {
+				li {
+					margin-bottom: 16px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
 }
